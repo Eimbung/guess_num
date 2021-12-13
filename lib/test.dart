@@ -6,7 +6,7 @@ void main() {
   var i = 0;
   var r = Random();
 
-  var answer = r.nextInt(10);
+  var answer = r.nextInt(100);
 
   int c = 0;
   while (true) {
@@ -22,6 +22,7 @@ void main() {
     }
     if (guess == answer) {
       print('$guess ถูกต้องนะค้าบบบ เวรี่กู๊ดโต๊ะเน้ เวรี่กู๊ดโต๊ะ,เดาไป $c รอบเด้อ');
+      print("*****END GAME*****");
       c++;
 
       break;
