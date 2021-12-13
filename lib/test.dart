@@ -8,15 +8,32 @@ void main() {
 
   var answer = r.nextInt(10);
 
+  int c = 0;
   while (true) {
     stdout.write('Please enter your number: ');
     var input = stdin.readLineSync();
-    var guess = int.tryParse(input!);
+    if (input == null){
+      return;
+    }
+
+    int? guess = int.tryParse(input);
+    if(guess == null){
+      continue;
+    }
     if (guess == answer) {
-      print('Correct');
+      print('$guess ถูกต้องนะค้าบบบ เวรี่กู๊ดโต๊ะเน้ เวรี่กู๊ดโต๊ะ,เดาไป $c รอบเด้อ');
+      c++;
+
       break;
     } else {
-      print('อีกสักรอบสิ๊');
+      if(guess > answer){
+        print ('$guess เยอะไปเด้อสู');
+        c++;
+      }
+      else if(guess < answer){
+        print ('$guess น้อยไปเด้อสู');
+        c++;
+      }
     }
   }
 }
